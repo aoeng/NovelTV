@@ -1,0 +1,10 @@
+#正向提示词前缀
+prompt_before: 'modern metropolis'
+#负面提示词
+negative_prompt: 'lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,nsfw,horror \(theme\),blood, '
+# 图片高
+height: 1080
+# 图片宽
+width: 1920
+# lora <lora:lora name:weight> 多个用英文,隔开 古代 <lora:20240628-1719586817716:0.8>
+lora:

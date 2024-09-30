@@ -1,0 +1,15 @@
+requests
+edge_tts
+jieba
+pillow
+tqdm
+moviepy
+pyyaml~=6.0.2
+aiofiles
+alibabacloud-alimt20181012
+openai
+nltk
+streamlit~=1.38.0
+pillow==9.5
+dynaconf~=3.2.6
+SQLAlchemy~=2.0.35
