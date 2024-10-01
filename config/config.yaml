@@ -1,78 +1,35 @@
-# 资源文件目录
-source_path: G:\ComicTweets\小说
-# 输出文件目录
-output_path: G:\ComicTweets\输出
-
-# 音频
 audio:
-  # 每行的字数限制
-  limit: 18
-  # 角色 终端输入 edge-tts --list-voices 可以查看所有声音
-  # 推荐 zh-CN-YunxiNeural 男  zh-CN-XiaoyiNeural  一般  女  zh-CN-XiaoxiaoNeural 最好  女
-  role: zh-CN-YunxiNeural
-  # 语速
-  rate: +30%
-  # 音量
-  volume: +100%
-  # 是否开启bgm 开启bgm 项目下要有一个bgm的目录
   bgm: true
-  # 主音频分贝db
-  main_db: 15
-  # 背景音频分贝db
   bgm_db: -15
-
-# 分词
-potential:
-  # 角色名字最小长度
-  min_length: 2
-  # 角色名字最大长度
-  max_length: 4
-  # 角色数量
-  top_n: 1
-  # 每张图片的最小文字数量
-  min_words: 30
-  #  每张图片的最大文字数量
-  max_words: 40
-
-# 这里只放常规参数，更多参数请修改stable diffusion.json
-stable_diffusion:
-  # 服务器ip
-  server_ip: http://127.0.0.1:7860
-
-video:
-  # ImageMagick 路径 # C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe
-  imagemagick_path: D:\Work\ImageMagick\magick.exe
-  # 字幕字体大小
-  fontsize: 12
-  # 字体颜色
-  fontcolor: FFFFFF
-  # 字体文件 要求在项目目录下
-  fontfile: simhei.ttf
-  # 描边颜色 内描边
-  stroke_color: yellow
-  # 描边宽
-  stroke_width: 1.2
-  # 文字间距
-  kerning: 1
-  # 字幕位置 越小越靠山 越大越靠下 0 - 1 开启ffmpeg后 6=上 10中 2下
-  position: 2
-  # 使用moviepy或者ffmpeg合成视频
-  use_moviepy: false
-  # 一次性合成 不用分段合成 视频效果更好 需要安装ffmpeg环境
-  once: true
-  # 是否开启动画，只有once开启时候才会有动画
-  animation: true
-  # 动画幅度比例 最佳1.2
-  animation_speed: 1.2
-  # 是否开启字幕
-  subtitles: true
-
+  limit: 18
+  main_db: 15
+  rate: +30%
+  role: zh-CN-YunxiNeural
+  volume: +100%
 chatgpt:
-  # ForwardKey
   ForwardKey: ollama
-  # url
-  url: http://127.0.0.1:11434/api
-  # 最大token数量
   max_token: 16385
-  # 模型
   model: gemma2
+  url: http://127.0.0.1:11434/api
+potential:
+  max_length: 4
+  max_words: 40
+  min_length: 2
+  min_words: 30
+  top_n: 1
+source_path: G:\novelTVFile
+stable_diffusion:
+  server_ip: http://127.0.0.1:7860
+video:
+  animation: true
+  animation_speed: 1.2
+  fontcolor: FFFFFF
+  font: ./assets/font/simhei.ttf
+  fontsize: 12
+  imagemagick_path: D:\Work\ImageMagick\magick.exe
+  kerning: 1
+  position: 2
+  stroke_color: yellow
+  stroke_width: 1.2
+  subtitles: true
+  use_moviepy: false

@@ -12,7 +12,8 @@ class Section(Model):
     __tablename__ = 'sections'
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     novel_id: Mapped[int] = mapped_column(ForeignKey("novels.id"))
-    content: Mapped[str] = mapped_column(Text())
-    prompt: Mapped[str] = mapped_column(String(100))
+    content: Mapped[str] = mapped_column(Text(), nullable=True)
+    status: Mapped[int] = mapped_column(Integer, default=0)
+    sort: Mapped[int] = mapped_column(Integer, default=0)
 
-    user: Mapped["Novel"] = relationship(back_populates="sections")
+    novel: Mapped["Novel"] = relationship(back_populates="sections")
